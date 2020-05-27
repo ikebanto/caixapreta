@@ -12,7 +12,7 @@
 .config/ranger/*
 !.config/ranger/rifle.conf
 !.config/ranger/scope.sh
-README.md
+!README.md
 
 
 
