@@ -6,7 +6,8 @@
 
 !.config
 .config/*
-.config/nvim/
+!.config/nvim/
+.config/nvim/*
 !.config/nvim/init.vim
 !.config/ranger
 .config/ranger/*
@@ -14,10 +15,8 @@
 !.config/ranger/scope.sh
 !README.md
 
-
-
-
-/.oh-my-zsh/custom/*
+!.oh-my-zsh/custom/
+.oh-my-zsh/custom/*
 !.oh-my-zsh/custom/aliases.zsh
 
 !.bashrc
