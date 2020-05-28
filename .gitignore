@@ -13,6 +13,7 @@
 .config/ranger/*
 !.config/ranger/rifle.conf
 !.config/ranger/scope.sh
+!.config/ranger/rc.conf
 !README.md
 
 !.oh-my-zsh/*
