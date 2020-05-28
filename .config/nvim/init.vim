@@ -29,6 +29,7 @@ syntax on
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'morhetz/gruvbox'
+Plug 'terroo/vim-auto-markdown'
 call plug#end()
 
 
