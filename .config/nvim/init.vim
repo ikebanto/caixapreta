@@ -11,6 +11,7 @@
 
 " Config Iniciais basicas
 "
+set showcmd  "Mostra interacao dos comandos aplicados lado direito inferior
 set relativenumber
 set number
 set hidden
@@ -30,7 +31,10 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'morhetz/gruvbox'
 Plug 'terroo/vim-auto-markdown'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 call plug#end()
 
-
-
+" Ranger
+let g:ranger_map_keys = 0
+map <leader>f :Ranger<CR>
