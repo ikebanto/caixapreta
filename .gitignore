@@ -18,6 +18,7 @@
 !.oh-my-zsh/custom/
 .oh-my-zsh/custom/*
 !.oh-my-zsh/custom/aliases.zsh
+!.oh-my-zsh/custom/example.zsh
 
 !.bashrc
 !.zshrc
