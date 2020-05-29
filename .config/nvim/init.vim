@@ -17,7 +17,7 @@ set number
 set hidden
 set mouse=a
 
-colorscheme gruvbox
+"colorscheme gruvbox
 set background=dark
 set t_Co=256
 syntax on
