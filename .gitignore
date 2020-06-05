@@ -23,6 +23,7 @@
 !.oh-my-zsh/custom/aliases.zsh
 !.oh-my-zsh/custom/example.zsh
 
+!Dbx/
 !Notes/*
 !Notes/Notas_Terminal_Velocity/
 !.bashrc
