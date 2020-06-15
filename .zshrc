@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,9 +15,15 @@ export ZSH="/home/jmae/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="spaceship"
-#ZSH_THEME="""dra"
+#ZSH_THEME="spaceship"
+#ZSH_THEME="dracula"
+#ZSH_THEME='agnoster'
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_INSTANT_PROMPT=off
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -113,7 +126,7 @@ SPACESHIP_PROMPT_ORDER=(
   char          # Prompt character
 )
 SPACESHIP_USER_SHOW=always
-SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_PROMPT_ADD_NEWLINE=true
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 
@@ -152,3 +165,40 @@ export PATH="$HOME/gems/bin:$PATH"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 source $HOME/.rvm/scripts/rvm
+
+if [[ ! -d ~/.zplug ]];then
+  git clone https://github.com/zplug/zplug ~/.zplug
+fi
+source ~/.zplug/init.zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/sudo", from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-completions"
+zplug "themes/robbyrussell", from:oh-my-zsh, as:theme
+zplug "dracula/zsh", as:theme 
+zplug "themes/spaceship", from:oh-my-zsh, as:theme
+zplug "romkatv/powerlevel10k", as:theme, depth:1
+zplug "sindresorhus/awesome"
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+zplug load --verbose
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+
+        source /etc/profile.d/vte.sh
+
+fi
