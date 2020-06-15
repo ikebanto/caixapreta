@@ -6,6 +6,7 @@
 
 !.config
 .config/*
+!.config/jrnl/
 !.config/nvim/
 .config/nvim/*
 !.config/nvim/init.vim
@@ -23,12 +24,8 @@
 !.oh-my-zsh/custom/aliases.zsh
 !.oh-my-zsh/custom/example.zsh
 
-!Dbx/
-!Notes/*
-!Notes/Notas_Terminal_Velocity/
 !.bashrc
 !.zshrc
-
 
 !.vimrc
 !.vim/

@@ -1,0 +1,14 @@
+default_hour: 9
+default_minute: 0
+editor: 'nvim'
+encrypt: false
+highlight: true
+indent_character: '|'
+journals:
+  default: ~/Notes/Jrnl/journal.txt
+  brisas: ~/Notes/Jrnl/brisas.txt
+linewrap: 79
+tagsymbols: '@'
+template: false
+timeformat: '%Y-%m-%d %H:%M'
+version: v2.0.1
