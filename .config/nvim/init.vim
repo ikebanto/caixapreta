@@ -11,13 +11,35 @@
 
 " Config Iniciais basicas
 "
-set showcmd  "Mostra interacao dos comandos aplicados lado direito inferior
-set relativenumber
-set number
-set hidden
+set showcmd                                        "Mostra interacao dos comandos aplicados lado direito inferior
+set relativenumber                                 "Destaca numero da linha  
+set number                                         "Habilita numeração"
+set hidden                                         "habilta buffer 
 set mouse=a
+set inccommand=split                               "Habilta Substituiçao de texto em tempo real
+set hls
+set cul
 
-"colorscheme gruvbox
+
+
+let mapleader="\<space>"                          "Mapeia para tecla espaço, a tecla leader que por padrão é a tecla \
+
+" -------------------------->
+"  Atalhos e mapeamentos de teclas
+" -------------------------->
+
+
+" Faz Uso do Plugin fzf e o silversearch-ag para fazer pesquisa de docs
+nnoremap <c-p> :Files<cr>                             
+nnoremap <c-f> :Ag<space>
+nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
+nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
+nnoremap <leader>er :vspit ~/.config/ranger/rc.conf<cr>
+nnoremap <leader>ez :vsplit ~/.zshrc<cr>
+nnoremap <leader>sz :source ~/.zshrc<cr>
+
+
+colorscheme gruvbox
 set background=dark
 set t_Co=256
 syntax on
@@ -35,7 +57,18 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'mattn/emmet-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'roxma/nvim-completion-manager'
+Plug 'w0rp/ale'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 call plug#end()
+
 
 " Ranger
 let g:ranger_map_keys = 0
