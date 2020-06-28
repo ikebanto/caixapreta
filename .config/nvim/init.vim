@@ -17,8 +17,8 @@ set number                                         "Habilita numeração"
 set hidden                                         "habilta buffer 
 set mouse=a
 set inccommand=split                               "Habilta Substituiçao de texto em tempo real
-set hls
-set cul
+"set hls
+"set cul
 
 
 
@@ -56,7 +56,7 @@ Plug 'terroo/vim-auto-markdown'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+"v'lug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'mattn/emmet-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'terryma/vim-multiple-cursors'
