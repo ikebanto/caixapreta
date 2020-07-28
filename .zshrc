@@ -82,7 +82,9 @@ POWERLEVEL9K_INSTANT_PROMPT=off
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git
+	tmux
+	)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -214,4 +216,6 @@ function _pip_completion {
 }
 compctl -K _pip_completion pip
 # pip zsh completion end
+
+ZSH_TMUX_AUTOSTART=true
 
